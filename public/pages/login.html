@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIKA - Login</title>
+    <link rel="stylesheet" href="../css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="logo">NIKA</div>
+    <!-- Form section start -->
+    <div class="btn-back">
+      <a href="../../index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+    <form action="actions" method="post">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required />
+
+        <label for="pwd"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="pass"
+          required
+        />
+
+        <button type="submit" class="signin">Sign in</button>
+        <button type="submit" class="signup">Sign up</button>
+      </div>
+    </form>
+    <!-- Form section end -->
+    <script
+      src="https://kit.fontawesome.com/8c1bad6c0c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
