@@ -14,15 +14,15 @@
   </head>
   <body>
     <div class="logo">NIKA</div>
-    <h1>Login</h1>
+    <h1>Register</h1>
     <!-- Form section start -->
     <div class="menu-row">
       <a href="../../index.html" id="index">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
-      <a href="signup.html" id="signup">
-        <span>Create Account </span>
-        <i class="fa-solid fa-user-plus"></i>
+      <a href="login.html" id="signup">
+        <span>Sign in </span>
+        <i class="fa-solid fa-right-to-bracket"></i>
       </a>
     </div>
     <form action="actions" method="post">
@@ -30,6 +30,15 @@
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required />
 
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="uname" required />
+
+        <label for="phone"><b>Phone Number</b></label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="+62" required>
+        <input type="submit" value="Send OTP">
+        <input type="text" placeholder="OTP" name="OTP" required>
+
+        <br>
         <label for="pwd"><b>Password</b></label>
         <input
           type="password"
@@ -38,7 +47,15 @@
           required
         />
 
-        <button type="submit" class="signin">Sign in</button>
+        <label for="pwd-confirm"><b>Password Match</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="pass"
+          required
+        />
+
+        <button type="submit" class="signin">Sign up</button>
       </div>
     </form>
     <!-- Form section end -->
