@@ -24,6 +24,7 @@ html {
     --sub-color: rgb(137, 180, 250);
     --white-color: rgb(205, 214, 244);
     --green-color: rgb(80, 200, 120);
+    --blue-color: rgb(16, 149, 193);
     --price-color: rgb(241, 66, 93);
 }
 
@@ -66,12 +67,29 @@ body {
 .link a {
     text-decoration: none;
     margin: 1rem;
-    font-size: 20px;
+    font-size: 1.4rem;
     color: var(--white-color);
 }
 
+.link a {
+    --s: .15em;
+  
+    line-height:1.1em;
+    padding-bottom: calc(2.1*var(--s));
+    background: 
+      conic-gradient(from 135deg at top,var(--blue-color) 90deg,#0000 0) 
+        left 0 bottom var(--s)/calc(2*var(--s)) var(--s) repeat-x,
+      conic-gradient(from -45deg at bottom,var(--blue-color) 90deg,#0000 0) 
+        left var(--s) bottom 0/calc(2*var(--s)) var(--s) repeat-x;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0) 0/var(--hover-blue,0%) padding-box no-repeat;
+    transition: .5s;
+}
+
 .link a:hover {
-    animation: pulse 2s infinite;
+    --hover-blue: 100%;
+    color: var(--blue-color);
 }
 
 .navbar .navbar-extra a {
@@ -414,13 +432,15 @@ footer .credits p a:hover {
         position: absolute;
         top: 100%;
         right: -100%;
-        width: 25rem;
-        height: 100vh;
-        background-color: var(--bg-dark-color);
+        width: 20rem;
+        height: 20vh;
         border: 1px solid var(--main-color);
         border-right: 0;
         border-top: 0;
+        border-radius: 10%;
         transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(11px);
     }
 
     .link.active {
@@ -430,6 +450,27 @@ footer .credits p a:hover {
     .link a {
         display: block;
         margin: 2rem;
+        font-size: 2rem;
+        color: var(--bg-dark-color);
+    }
+
+    .link a:hover {
+        --hover-blue: 75%;
+        color: var(--blue-color);
+    }
+
+    .about .row .about-img {
+        flex: 1 1 30rem;
+    }
+
+    .about .row .about-img img {
+        max-width: 95%;
+        height: auto;
+    }
+    
+    .about .row .content {
+        flex: 1 1 30rem;
+        padding: 0 1rem;
     }
 }
 
@@ -451,13 +492,15 @@ footer .credits p a:hover {
         position: absolute;
         top: 100%;
         right: -100%;
-        width: 25rem;
-        height: 100vh;
-        background-color: var(--bg-dark-color);
+        width: 20rem;
+        height: 20vh;
         border: 1px solid var(--main-color);
         border-right: 0;
         border-top: 0;
+        border-radius: 10%;
         transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(11px);
     }
 
     .link.active {
@@ -467,6 +510,27 @@ footer .credits p a:hover {
     .link a {
         display: block;
         margin: 2rem;
+        font-size: 2.2rem;
+        color: var(--bg-dark-color);
+    }
+
+    .link a:hover {
+        --hover-blue: 75%;
+        color: var(--blue-color);
+    }
+
+    .about .row .about-img {
+        flex: 1 1 30rem;
+    }
+
+    .about .row .about-img img {
+        max-width: 90%;
+        height: auto;
+    }
+    
+    .about .row .content {
+        flex: 1 1 30rem;
+        padding: 0 1rem;
     }
 }
 
