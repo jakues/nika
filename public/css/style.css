@@ -36,20 +36,26 @@ body {
 /* Navbar */
 
 .navbar {
-    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.3rem 5%;
     color: var(--white-color);
     background-color: var(--bg-dark-color);
+    border-bottom: 1px solid var(--main-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 
 .logo a {
     display: inline-block;
     text-decoration: none;
-    padding-left: 30px;
-    padding-bottom: 5px;
-    font-size: 45px;
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: var(--white-color);
     font-family: 'Darumadrop One', cursive;
@@ -57,25 +63,14 @@ body {
     animation: pulse 3s infinite;
 }
 
-.link li {
-    list-style: none;
-}
-
-.link ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.link ul li a {
+.link a {
     text-decoration: none;
-    padding: 15px;
-    display: block;
+    margin: 1rem;
     font-size: 20px;
     color: var(--white-color);
 }
 
-.link ul li a:hover {
+.link a:hover {
     animation: pulse 2s infinite;
 }
 
@@ -85,7 +80,11 @@ body {
 }
 
 #user {
-    margin-right: 25px;
+    margin-right: 1rem;
+}
+
+#bars {
+    display: none;
 }
 
 /* Hero */
@@ -153,6 +152,10 @@ body {
 }
 
 /* Product */
+
+.menu {
+    padding: 3rem 5% 1rem;
+}
 
 .menu h2 {
     text-align: center;
@@ -281,7 +284,7 @@ body {
 
 /* About */
 .about {
-    padding: 3px 5%;
+    padding: 3rem 5% 1.4rem;
 }
 
 .about h2 {
@@ -365,6 +368,106 @@ footer .credits p a {
 footer .credits p a:hover {
     text-decoration: underline;
     color: var(--white-color);
+}
+
+/* Media queries */
+
+/* Laptops */
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    html {
+        font-size: 75%;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablets */
+@media 
+  (min-device-width: 481px) 
+  and (max-device-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+
+    #user {
+        margin-right: 0.5rem;
+    }
+
+    #bars {
+        display: inline-block;
+    }
+
+    .link {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        height: 100vh;
+        background-color: var(--bg-dark-color);
+        border: 1px solid var(--main-color);
+        border-right: 0;
+        border-top: 0;
+        transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+    .link.active {
+        right: 0;
+    }
+
+    .link a {
+        display: block;
+        margin: 2rem;
+    }
+}
+
+/* Phone */
+@media (max-device-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+
+    #user {
+        margin-right: 0.5rem;
+    }
+
+    #bars {
+        display: inline-block;
+    }
+
+    .link {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        height: 100vh;
+        background-color: var(--bg-dark-color);
+        border: 1px solid var(--main-color);
+        border-right: 0;
+        border-top: 0;
+        transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+    .link.active {
+        right: 0;
+    }
+
+    .link a {
+        display: block;
+        margin: 2rem;
+    }
 }
 
 /* animate pulse color */
