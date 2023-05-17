@@ -438,21 +438,19 @@ footer .credits p a:hover {
 
     .link {
         position: absolute;
-        top: 100%;
+        top: 115%;
         right: -100%;
         width: 20rem;
         height: 20vh;
         border: 1px solid var(--main-color);
-        border-right: 0;
-        border-top: 0;
         border-radius: 10%;
-        transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(11px);
     }
 
     .link.active {
-        right: 0;
+        right: 2%;
     }
 
     .link a {
