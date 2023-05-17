@@ -412,6 +412,14 @@ footer .credits p a:hover {
     }
 }
 
+@media
+ (min-device-width: 769px)
+ and (max-device-width: 1199px) {
+    html {
+        font-size: 70%;
+    }
+}
+
 /* Tablets */
 @media 
   (min-device-width: 481px) 
