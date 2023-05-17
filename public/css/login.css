@@ -195,7 +195,7 @@ footer .credits p a:hover {
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     html {
-        font-size: 75%;
+        font-size: 70%;
     }
 }
 
@@ -206,7 +206,15 @@ footer .credits p a:hover {
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     html {
-        font-size: 75%;
+        font-size: 70%;
+    }
+}
+
+@media
+ (min-device-width: 769px)
+ and (max-device-width: 1199px) {
+    html {
+        font-size: 70%;
     }
 }
 
@@ -227,6 +235,18 @@ footer .credits p a:hover {
 
     button {
         width: 98%;
+    }
+
+    input[type=email] {
+        width: 98%;
+    }
+
+    input[type=tel] {
+        width: 38%;
+    }
+
+    input[name=OTP] {
+        width: 16%;
     }
 }
 
